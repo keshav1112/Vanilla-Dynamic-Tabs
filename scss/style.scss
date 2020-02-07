@@ -1,0 +1,74 @@
+@import '../scss/colors';
+@import '../scss/mixin';
+
+body{
+    padding: 5rem 15rem;
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    @include noPaddingMargin();
+    list-style: none;
+}
+
+p{
+    @include noPaddingMargin();
+    line-height: 2rem;
+}
+
+.tab-section{
+    border: 1px solid var(--dark-blue);
+    padding: 1rem;
+    @include border-radius(3px);
+    .tabs{
+        display: flex;
+        justify-content: space-between;
+        li{
+            width: 100%;
+            display: flex;
+            text-align: center;
+            border-left: 1px solid var(--white);
+            a{
+                width: 100%;
+                display: inline-block;
+                padding: 1rem 2rem;
+                background-color: var(--dark-blue);
+                color: var(--white);
+                @include transition(ease-in-out .3s);
+            }
+            .active-tab{
+                background-color: var(--dark-blue-active);
+            }
+            &:first-child{
+                border-left: 0px;
+            }
+        }
+    }
+
+    .tab-content{
+        border: 1px solid var(--dark-blue);
+        padding: 1rem;
+
+        .tab-pane{
+            display: none;
+        }
+
+        .active{
+            display: block;
+        }
+
+        .fade{
+            opacity: 0;
+            transition: opacity .15s linear;
+        }
+        .show{
+            opacity: 1;
+        }
+    }
+}

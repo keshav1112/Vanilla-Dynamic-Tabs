@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic Tabs in Valina Script</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./scss/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="tab-section">
+        <ul class="tabs">
+            <li><a href="#a" onclick="tabBtn('secOne')" id="tabOne" class="active-tab">Section 1</a></li>
+            <li><a href="#a" onclick="tabBtn('secTwo')" id="tabTwo">Section 2</a></li>
+            <li><a href="#a" onclick="tabBtn('secThree')" id="tabThree">Section 3</a></li>
+            <li><a href="#a" onclick="tabBtn('secFour')" id="tabFour">Section 4</a></li>
+        </ul>
+        <div class="tab-content" id="tabInsert"></div>
+    </div>
+
+    <script type="text/javascript" src="./js/tab.js"></script>
+
+</body>
+</html>
